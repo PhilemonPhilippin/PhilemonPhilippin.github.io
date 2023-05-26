@@ -15,6 +15,7 @@
     <link href="../assets/styles/styles.css" type="text/css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
   </head>
+
   <body>
     <header id="top" class="p-3 text-bg-dark">
       <div class="container">
@@ -44,19 +45,22 @@
         </div>
       </div>
     </header>
+
     <header class="bg-primary text-center">
       <h1 class="fs-2 text-white">Philémon Philippin</h1>
     </header>
     <div class="container text-center">
-      <h2 class="fs-3 mt-4 text-decoration-underline">
+      <h2 class="fs-3 mt-4">
         <img src="../assets/images/github.png" alt="github-icon" /> Projets
         GitHub
       </h2>
       <h3 class="fs-4 mt-4">🍽️ Kitchen</h3>
-      <div class="mt-3">
+      <h4 class="fs-5 mt-3 text-decoration-underline">Introduction</h4>
+      <div class="mt-2">
         <p>
           Pour le moment, j'apprends à utiliser Angular et je développe en même
-          temps une application web pour gérer des recettes de cuisine.<br />
+          temps une application web pour gérer des recettes de cuisine. Ce
+          projet n'est <span class="fw-bold">pas encore terminé</span>. <br />
           Voici les liens vers le code source des deux parties du projet 🍽️
           Kitchen, sur GitHub :
         </p>
@@ -74,8 +78,25 @@
         </ul>
       </div>
 
-      <h3 class="fs-4 m-4">🐞 Bugtracker</h3>
-      <div class="mt-3">
+      <h4 class="fs-5 mt-3 text-decoration-underline">Détails</h4>
+      <div class="mt-2">
+        <p>
+          🍽️ Kitchen est une application web visant à gérer des recettes de
+          cuisine.<br />
+          La partie visuelle de ce site est faite avec
+          <span class="fw-bold">Angular</span>, et la partie serveur est
+          constituée principalement d'une
+          <span class="fw-bold">ASP.NET API</span>. <br />Les données sont
+          stockées de manière persistante dans une base de données
+          <span class="fw-bold">SQL Server</span>, créée via
+          <span class="fw-bold">Entity Framework</span>. L'accès à ces données
+          se fait également via Entity Framework.
+        </p>
+      </div>
+
+      <h3 class="fs-4 mt-5">🐞 Bugtracker</h3>
+      <h4 class="fs-5 mt-3 text-decoration-underline">Introduction</h4>
+      <div class="mt-2">
         <p>
           Si vous souhaitez voir mon plus gros projet personnel, j'ai réalisé ce
           Bugtracker en environ 1 mois durant ma formation en développement
@@ -96,7 +117,23 @@
           </li>
         </ul>
       </div>
+
+      <h4 class="fs-5 mt-3 text-decoration-underline">Détails</h4>
+      <div class="mt-2">
+        <p>
+          🐞 Bugtracker est une application web visant à assurer le suivi de
+          bugs rencontrés lors de développement de divers logiciels.<br />
+          La partie visuelle de ce site est faite avec
+          <span class="fw-bold">Blazor Web Assembly</span>, et la partie serveur
+          est constituée principalement d'une ASP.NET API. <br />Les données
+          sont stockées de manière persistante dans une base de données SQL
+          Server, créée via des scripts en
+          <span class="fw-bold">Transact-SQL</span>. L'accès à ces données se
+          fait via <span class="fw-bold">ADO.NET</span>.
+        </p>
+      </div>
     </div>
+
     <div class="container">
       <footer class="py-3 my-4 border-top">
         <ul class="nav justify-content-center pb-3 mb-3">

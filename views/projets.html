@@ -50,11 +50,30 @@
       <h1 class="fs-2 text-white">Philémon Philippin</h1>
     </header>
     <div class="container text-center">
-      <h2 class="fs-3 mt-4">
-        <img src="../assets/images/github.png" alt="github-icon" /> Projets
-        GitHub
+      <h2 class="fs-3 mt-4 text-decoration-underline fw-bold">
+         Projets
       </h2>
-      <h3 class="fs-3 mt-4 fw-bold">🍽️ Kitchen</h3>
+      <div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Projet</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr onclick="goToKitchen()">
+              <td>1</td>
+              <td>Kitchen</td>
+            </tr>
+            <tr onclick="goToBugtracker()">
+              <td>2</td>
+              <td>Bugtracker</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 id="kitchen" class="fs-3 mt-4 fw-bold">🍽️ Kitchen</h3>
       <h4 class="fs-4 mt-3 text-decoration-underline">Introduction</h4>
       <div class="mt-2">
         <p>
@@ -94,7 +113,7 @@
         </p>
       </div>
 
-      <h3 class="fs-3 mt-5 fw-bold">🐞 Bugtracker</h3>
+      <h3 id="bugtracker" class="fs-3 mt-5 fw-bold">🐞 Bugtracker</h3>
       <h4 class="fs-4 mt-3 text-decoration-underline">Introduction</h4>
       <div class="mt-2">
         <p>
@@ -235,5 +254,6 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script src="../assets/scripts/script.js"></script>
   </body>
 </html>

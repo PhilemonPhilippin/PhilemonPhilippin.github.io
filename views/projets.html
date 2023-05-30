@@ -50,9 +50,7 @@
       <h1 class="fs-2 text-white">Philémon Philippin</h1>
     </header>
     <div class="container text-center">
-      <h2 class="fs-3 mt-4 text-decoration-underline fw-bold">
-         Projets
-      </h2>
+      <h2 class="fs-3 mt-4 text-decoration-underline fw-bold">Projets</h2>
       <div>
         <table class="table table-hover">
           <thead>
@@ -62,55 +60,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr onclick="goToKitchen()" class="clickable">
+            <tr onclick="goToBugtracker()" class="clickable">
               <td>1</td>
-              <td>Kitchen</td>
-            </tr>
-            <tr onclick="goToBugtracker()" class="clickable"">
-              <td>2</td>
               <td>Bugtracker</td>
+            </tr>
+            <tr onclick="goToKitchen()" class="clickable">
+              <td>2</td>
+              <td>Kitchen</td>
             </tr>
           </tbody>
         </table>
-      </div>
-      <h3 id="kitchen" class="fs-3 mt-4 fw-bold">🍽️ Kitchen</h3>
-      <h4 class="fs-4 mt-3 text-decoration-underline">Introduction</h4>
-      <div class="mt-2">
-        <p>
-          Pour le moment, j'apprends à utiliser Angular et je développe en même
-          temps une application web pour gérer des recettes de cuisine. Ce
-          projet n'est <span class="fw-bold">pas encore terminé</span>. <br />
-          Voici les liens vers le code source des deux parties du projet 🍽️
-          Kitchen, sur GitHub :
-        </p>
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item list-group-item-primary flex-fill">
-            <a href="https://github.com/PhilemonPhilippin/Kitchen-repo">
-              🍽️ Kitchen, la partie back-end (API)</a
-            >
-          </li>
-          <li class="list-group-item list-group-item-primary flex-fill">
-            <a href="https://github.com/PhilemonPhilippin/KitchenNG-repo">
-              🍽️ Kitchen, la partie front-end (UI)</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <h4 class="fs-4 mt-3 text-decoration-underline">Détails</h4>
-      <div class="mt-2">
-        <p>
-          🍽️ Kitchen est une application web visant à gérer des recettes de
-          cuisine.<br />
-          La partie visuelle de ce site est faite avec
-          <span class="fw-bold">Angular</span>, et la partie serveur est
-          constituée principalement d'une
-          <span class="fw-bold">ASP.NET API</span>. <br />Les données sont
-          stockées de manière persistante dans une base de données
-          <span class="fw-bold">SQL Server</span>, créée via
-          <span class="fw-bold">Entity Framework</span>. L'accès à ces données
-          se fait également via Entity Framework.
-        </p>
       </div>
 
       <h3 id="bugtracker" class="fs-3 mt-5 fw-bold">🐞 Bugtracker</h3>
@@ -228,8 +187,48 @@
           class="img-fluid"
         />
       </div>
-    </div>
 
+      <h3 id="kitchen" class="fs-3 mt-4 fw-bold">🍽️ Kitchen</h3>
+      <h4 class="fs-4 mt-3 text-decoration-underline">Introduction</h4>
+      <div class="mt-2">
+        <p>
+          J'ai appris à utiliser Angular pour développer une application web
+          afin de gérer des recettes de cuisine. Ce projet n'est
+          <span class="fw-bold">pas encore terminé</span>, et a été mis sur
+          pause pour le moment. <br />
+          Voici les liens vers le code source des deux parties du projet 🍽️
+          Kitchen, sur GitHub :
+        </p>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-primary flex-fill">
+            <a href="https://github.com/PhilemonPhilippin/Kitchen-repo">
+              🍽️ Kitchen, la partie back-end (API)</a
+            >
+          </li>
+          <li class="list-group-item list-group-item-primary flex-fill">
+            <a href="https://github.com/PhilemonPhilippin/KitchenNG-repo">
+              🍽️ Kitchen, la partie front-end (UI)</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <h4 class="fs-4 mt-3 text-decoration-underline">Détails</h4>
+      <div class="mt-2">
+        <p>
+          🍽️ Kitchen est une application web visant à gérer des recettes de
+          cuisine.<br />
+          La partie visuelle de ce site est faite avec
+          <span class="fw-bold">Angular</span>, et la partie serveur est
+          constituée principalement d'une
+          <span class="fw-bold">ASP.NET API</span>. <br />Les données sont
+          stockées de manière persistante dans une base de données
+          <span class="fw-bold">SQL Server</span>, créée via
+          <span class="fw-bold">Entity Framework</span>. L'accès à ces données
+          se fait également via Entity Framework.
+        </p>
+      </div>
+    </div>
     <div class="container">
       <footer class="py-3 my-4 border-top">
         <ul class="nav justify-content-center pb-3 mb-3">

@@ -192,10 +192,16 @@
       <h4 class="fs-4 mt-3 text-decoration-underline">Introduction</h4>
       <div class="mt-2">
         <p>
-          J'ai appris à utiliser Angular pour développer une application web
-          afin de gérer des recettes de cuisine. Ce projet n'est
+          Kitchen est une application web utile pour gérer des recettes de
+          cuisine. Ce projet n'est
           <span class="fw-bold">pas encore terminé</span>, et a été mis sur
-          pause pour le moment. <br />
+          pause pour le moment.<br />
+          Le but était de faire une API un peu plus propre que celle du projet
+          Bugtracker, tout en prenant en main Angular. Une fois cela fait, je
+          n'avais plus tellement de nouveau savoir-faire à démontrer via ce
+          projet. <br />
+          Je l'ai donc mis sur pause afin de me concentrer sur l'apprentissage
+          de nouvelles techniques. <br />
           Voici les liens vers le code source des deux parties du projet 🍽️
           Kitchen, sur GitHub :
         </p>
@@ -227,6 +233,41 @@
           <span class="fw-bold">Entity Framework</span>. L'accès à ces données
           se fait également via Entity Framework.
         </p>
+      </div>
+
+      <h5 class="fs-5 mt-5">1. Recipe list</h5>
+      <div>
+        <p>
+          Cette page affiche la liste de toutes les recettes. Un système de
+          pagination est intégré : la requête envoyée vers l'API précise le
+          numéro de la page ainsi que le nombre de recettes par page. <br />
+          La requête vers l'API peut également contenir des mots-clés à
+          rechercher ("Search") afin de filtrer les résultats.
+        </p>
+        <img
+          src="../assets/images/KitchenDemo/recipelist.png"
+          alt="screenshot-recipelist"
+          class="img-fluid"
+        />
+      </div>
+
+      <h5 class="fs-5 mt-5">2. Recipe detail</h5>
+      <div>
+        <p>
+          Cette page affiche les détails d'une recette en particulier. L'on peut
+          cliquer sur chaque élément afin d'aller vers la page permettant
+          d'afficher les détails de cet élément ou même de le modifier.
+        </p>
+        <img
+          src="../assets/images/KitchenDemo/recipedetail.png"
+          alt="screenshot-recipedetail"
+          class="img-fluid"
+        />
+        <img
+          src="../assets/images/KitchenDemo/recipeedit.png"
+          alt="screenshot-recipeedit"
+          class="img-fluid mt-5"
+        />
       </div>
     </div>
     <div class="container">

@@ -1,5 +1,22 @@
+:root {
+  --custom-primary: #406882;
+  --custom-secondary: #1a374d;
+}
+
 .custom-hover:hover {
-  background-color: #0d6efd;
+  background-color: var(--custom-secondary);
+}
+
+.bg-color-primary {
+  background-color: var(--custom-primary);
+}
+
+.bg-color-secondary {
+  background-color: var(--custom-secondary);
+}
+
+.color-secondary {
+  color: var(--custom-secondary);
 }
 
 .clickable {

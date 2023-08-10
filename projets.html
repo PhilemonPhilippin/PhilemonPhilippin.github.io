@@ -82,8 +82,8 @@
           <h4 class="fs-4 mt-3 text-decoration-underline">Introduction</h4>
           <div class="mt-2">
             <p>
-              Si vous souhaitez voir mon plus gros projet personnel, j'ai
-              réalisé ce Bugtracker en environ 1 mois durant ma formation en
+              Si vous souhaitez voir mon premier projet personnel, j'ai réalisé
+              ce Bugtracker en environ 1 mois durant ma formation en
               développement .NET.
             </p>
             <p>
@@ -217,12 +217,9 @@
           <div class="mt-2">
             <p>
               Kitchen est une application web utile pour gérer des recettes de
-              cuisine. Ce projet n'est
-              <span class="fw-bold">pas encore terminé</span>.
+              cuisine. A ce jour, c'est mon projet avec le plus d'envergure.
             </p>
             <p>
-              Le but est de faire une API robuste tout en prenant en main
-              Angular.<br />
               Voici les liens vers le code source des deux parties du projet 🍽️
               Kitchen, sur GitHub :
             </p>
@@ -258,6 +255,173 @@
               <span class="fw-bold">Entity Framework</span>. L'accès à ces
               données se fait également via Entity Framework.
             </p>
+          </div>
+
+          <h5 class="fs-5 mt-5">1. Recipe list</h5>
+          <div>
+            <p>
+              La page centrale est la liste de recettes. On y retrouve plusieurs
+              composants tels que la barre de recherche utilisée pour filtrer
+              les recherches, un bouton pour ajouter une recette, la pagination
+              et enfin la liste de recettes.
+            </p>
+            <img
+              src="./assets/images/KitchenDemo/recipe_list.png"
+              alt="screenshot-recipe-list"
+              class="img-fluid shadow-lg"
+            />
+
+            <p class="mt-5">
+              La pagination permet de choisir le nombre de recettes affichées
+              ainsi que le numéro de la page souhaitée.
+            </p>
+            <img
+              src="./assets/images/KitchenDemo/pagination.png"
+              alt="screenshot-pagination"
+              class="img-fluid shadow-lg"
+            />
+
+            <p class="mt-5">
+              Le bouton "Add" permet d'afficher un composant nous permettant
+              d'ajouter une recette à la liste.
+            </p>
+            <img
+              src="./assets/images/KitchenDemo/add_recipe.png"
+              alt="screenshot-add-recipe"
+              class="img-fluid shadow-lg"
+            />
+          </div>
+
+          <h5 class="fs-5 mt-5">2. Recipe details</h5>
+          <div>
+            <p>
+              Lorsqu'on sélectionne une recette dans la liste, l'on arrive sur
+              la page contenant les détails de cette recette. Voici les deux
+              captures d'écran présentant cette page.
+            </p>
+            <p>
+              La première partie de la page présente les détails de la recette,
+              ainsi que les ingrédients présents dans celle-ci.
+            </p>
+            <img
+              src="./assets/images/KitchenDemo/recipe_details-1.png"
+              alt="screenshot-recipe-details-1"
+              class="img-fluid shadow-lg"
+            />
+
+            <p class="mt-5">
+              La deuxième partie de la page présente les étapes de préparations
+              de la recette.
+            </p>
+            <img
+              src="./assets/images/KitchenDemo/recipe_details-2.png"
+              alt="screenshot-recipe-details-2"
+              class="img-fluid shadow-lg"
+            />
+          </div>
+
+          <div class="mt-5">
+            <p>
+              Un composant s'affiche lorsque l'on clique sur le bouton Edit afin
+              de modifier la recette en question.
+            </p>
+            <img
+              src="./assets/images/KitchenDemo/recipe_edit.png"
+              alt="screenshot-recipe-edit"
+              class="img-fluid shadow-lg"
+            />
+          </div>
+
+          <div class="mt-5">
+            <p>
+              Un peu plus bas, dans la liste des ingrédients de la recette, nous
+              pouvons changer la quantité de l'ingrédient concerné en cliquant
+              sur le bouton jaune. Le bouton "Add" permet d'ajouter un
+              ingrédient à la recette.
+            </p>
+            <img
+              src="./assets/images/KitchenDemo/edit_recipe_ingredient.png"
+              alt="screenshot-edit-recipe-ingredient"
+              class="img-fluid shadow-lg"
+            />
+          </div>
+
+          <div class="mt-5">
+            <p>
+              Tout en bas de la page, le bouton "Add" permet d'ajouter des
+              étapes de préparation pour la recette. Chaque élément sur cette
+              page est sélectionnable. L'on peut cliquer sur la catégorie de
+              recette, sur un ingrédient ou sur une étape de préparation de
+              recette.
+            </p>
+          </div>
+
+          <h5 class="fs-5 mt-5">
+            3. Category, ingredient and preparation step details
+          </h5>
+          <div>
+            <p>
+              Si l'on sélectionne la catégorie de la recette, nous arrivons sur
+              la page des détails de la catégorie en question. Le design de
+              cette page est réutilisé pour les pages relatives aux détails d'un
+              ingrédient et aux détails d'une étape de préparation.
+            </p>
+            <p>
+              Ces trois pages nous permettent de consulter les informations
+              détaillées sur l'entité en question et nous permettent également
+              de la modifier ou de la supprimer complètement.
+            </p>
+          </div>
+          <div>
+            <img
+              src="./assets/images/KitchenDemo/category_details.png"
+              alt="screenshot-category-details"
+              class="img-fluid shadow-lg"
+            />
+          </div>
+
+          <div class="mt-5">
+            <img
+              src="./assets/images/KitchenDemo/ingredient_details.png"
+              alt="screenshot-ingredient-details"
+              class="img-fluid shadow-lg"
+            />
+          </div>
+
+          <div class="mt-5">
+            <img
+              src="./assets/images/KitchenDemo/preparation_step_details.png"
+              alt="screenshot-preparation-step-details"
+              class="img-fluid shadow-lg"
+            />
+          </div>
+
+          <h5 class="fs-5 mt-5">4. Category list</h5>
+          <div>
+            <p>
+              La barre de navigation nous permet d'aller sur la page affichant
+              la liste des catégories.
+            </p>
+            <img
+              src="./assets/images/KitchenDemo/category_list.png"
+              alt="screenshot-category-list"
+              class="img-fluid shadow-lg"
+            />
+          </div>
+
+          <h5 class="fs-5 mt-5">5. Ingredient list</h5>
+          <div>
+            <p>
+              La barre de navigation nous permet également d'aller sur la page
+              affichant la liste des ingrédients. L'on peut ici aussi retrouver
+              le composant de pagination nous permettant de choisir le nombre
+              d'ingrédients à afficher et le numéro de la page souhaitée.
+            </p>
+            <img
+              src="./assets/images/KitchenDemo/ingredient_list.png"
+              alt="screenshot-ingredient-list"
+              class="img-fluid shadow-lg"
+            />
           </div>
         </div>
         <div class="col-lg-2"></div>

@@ -83,7 +83,7 @@ footer p {
   color: #fff;
   position: absolute;
   bottom: calc(41px - 19.2px);
-  max-width: 175.71px;
-  left: calc(50vw - (175.71px / 2));
+  max-width: 180px;
+  left: calc(50vw - (180px / 2));
   font-size: 0.875rem;
 }

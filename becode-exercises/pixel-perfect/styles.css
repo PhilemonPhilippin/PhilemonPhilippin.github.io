@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #d74949;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+main {
+  background-color: #f3f3f3;
+  /* 77% de vw car 1110 sur 1440px total width */
+  max-width: 77vw;
+  height: 91.2vh;
+  margin: auto;
+}
+
+h1 {
+  font-size: 0.875rem;
+  font-weight: 300 bold;
+  text-shadow: 1px 1px 2px black;
+  /* top distance 100 px donc 14.81vh */
+  padding-top: 14.81vh;
+  /* left distance 215px - 165px donc 50px sur Figma sur les 1440px total width ça fait 3.47vw */
+  padding-left: 3.47vw;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: right;
+  padding-right: 3.47vw;
+}
+
+main > p {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+main p span {
+  color: #8f2727;
+}
+
+div.card {
+  margin-top: 38px;
+  margin-left: 3.47vw;
+  width: 200px;
+  height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+div.card > img {
+  border-radius: 5px 5px 0 0;
+}
+div.container {
+  padding: 2px 16px;
+}
+p.name {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+p.role {
+  font-size: 0.875rem;
+}
+
+div.socials {
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: #3a3a3a;
+  /* 8.8% car 60 sur 675px total height */
+  height: 8.8vh;
+}
+
+footer p {
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  bottom: calc(41px - 19.2px);
+  max-width: 175.71px;
+  left: calc(50vw - (175.71px / 2));
+  font-size: 0.875rem;
+}

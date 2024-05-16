@@ -31,10 +31,12 @@ body {
   font-size: 36px;
   text-align: center;
   color: var(--main-black);
+  padding: 1rem;
 }
 
 .card-body {
   font-weight: 600;
+  padding: 1rem;
 }
 
 ul {
@@ -55,6 +57,7 @@ li img {
   font-size: 36px;
   text-align: center;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .card-footer .price {
@@ -75,9 +78,10 @@ button {
   letter-spacing: 1.5px;
   background-color: #ffbc0f;
   border-radius: 27px;
+  border: none;
   position: absolute;
   bottom: -5%;
   left: 50%;
   transform: translate(-50%);
-  padding: 10px; 
+  padding: 1.2rem; 
 }

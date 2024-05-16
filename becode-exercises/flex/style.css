@@ -75,7 +75,7 @@ li img {
 button {
   font-weight: 600;
   color: #253868;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   background-color: #ffbc0f;
   border-radius: 27px;
   border: none;
@@ -83,5 +83,5 @@ button {
   bottom: -5%;
   left: 50%;
   transform: translate(-50%);
-  padding: 1.2rem; 
+  padding: 1rem;
 }

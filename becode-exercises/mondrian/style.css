@@ -6,6 +6,9 @@
 
 body {
   background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mondrian {
@@ -16,7 +19,6 @@ body {
   grid-template-rows: 414px 325px;
   grid-template-columns: 320px 419px;
   gap: 9px;
-  margin: 0 auto;
 }
 
 .mondrian div {

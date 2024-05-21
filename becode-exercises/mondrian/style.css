@@ -65,7 +65,7 @@ body {
 }
 
 .mondrian .box-4 .item-1 .sub-2 .lastchild-1 {
-  background-color: yellow;
+  background-color: #f8d01f;
 }
 
 .mondrian .box-4 .item-1 .sub-2 .lastchild-2 {
@@ -76,9 +76,9 @@ body {
   display: grid;
   background-color: black;
   grid-template-rows: 130px 1fr;
-  gap: 10px;
+  gap: 15px;
 }
 
 .mondrian .box-4 .item-2 .sub-1 {
-  background-color: blue;
+  background-color: #004592;
 }

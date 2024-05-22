@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.padding {
+  padding: 60px 120px;
+}
+
+header {
+  background-color: #3a3d46;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.logo {
+  margin-left: 120px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-right: 120px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:nth-child(1) {
+  background-color: #007dfc;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+main {
+  font-family: "Raleway", sans-serif;
+}
+
+.ipsum {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #232323;
+  justify-items: center;
+  align-items: center;
+}
+
+.about-ipsum {
+  max-width: 460px;
+}
+h1 {
+  font-size: 65px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+h1 span {
+  color: #ffb800;
+}
+
+h2 {
+  color: #007dfc;
+  font-weight: 800;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.hr {
+  background-color: white;
+  height: 1px;
+  margin-bottom: 30px;
+}
+
+.about-ipsum p {
+  color: #ffffff;
+  font-weight: 400;
+  margin-bottom: 30px;
+  width: 75%;
+}
+.about-ipsum a {
+  background-color: #ffb800;
+  color: #232323;
+  text-decoration: none;
+  padding: 7px 21px;
+  border-radius: 15px;
+  font-weight: 400;
+}
+
+.ipsum-image {
+  max-width: 590px;
+  max-height: 590px;
+}
+
+.ipsum-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.news {
+  background-color: #f6f6f6;
+}
+
+.news h2 {
+  font-weight: 400;
+  font-size: 28px;
+  color:black;
+  margin-bottom: 2px;
+}
+
+.hr-2 {
+  background-color: black;
+  height: 1px;
+  margin-bottom: 30px;
+  max-width: 12%;
+  transform: translate(30%);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-areas:
+    "image-1 arriere-plan-1 arriere-plan-2"
+    "image-1 arriere-plan-3 arriere-plan-4";
+  gap: 10px;
+}
+
+.item-1 {
+  grid-area: image-1;
+}
+
+.item-2 {
+  grid-area: arriere-plan-1;
+}
+
+.item-3 {
+  grid-area: arriere-plan-2;
+}
+
+.item-4 {
+  grid-area: arriere-plan-3;
+}
+
+.item-5 {
+  grid-area: arriere-plan-4;
+}
+
+.news-grid .image-item img {
+  width: 100%;
+  object-fit: cover;
+}

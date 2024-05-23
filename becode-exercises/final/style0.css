@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 70px 165px;
+  background: #fffdfa;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.logo {
+  max-height: 40px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  color: #5e607a;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 20px;
+  margin-bottom: 70px;
+}
+
+article {
+  display: grid;
+  grid-template-areas:
+    "decorative decorative"
+    "heading call-to-action";
+}
+
+article .decorative {
+  grid-area: decorative;
+  margin-bottom: 25px;
+}
+
+.img-fit {
+  width: 100%;
+  object-fit: cover;
+}
+
+article h1 {
+  grid-area: heading;
+  font-weight: 800;
+  font-size: 56px;
+  max-width: 75%;
+  color: #00001a;
+}
+
+article .call-to-action {
+  grid-area: call-to-action;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article .call-to-action p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #5e607a;
+  line-height: 26px;
+}
+
+article .call-to-action a {
+  text-align: center;
+  text-decoration: none;
+  color: #fffdfa;
+  background: #f15d51;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 15px;
+  max-width: 185px;
+  letter-spacing: 4.38px;
+}
+
+aside {
+  background: #00001a;
+  padding: 25px 15px;
+}
+
+aside h2 {
+  color: #e9aa52;
+  font-size: 40px;
+  font-weight: 500;
+  height: 10%;
+}
+
+aside .aside-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 90%;
+}
+
+aside h3 {
+  color: #fffdfa;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+aside div p {
+  color: #c5c6ce;
+  font-size: 15px;
+}
+
+.hr {
+  height: 1px;
+  background: #c5c6ce;
+}
+
+section.trending {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.trending-section {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+}
+.trending-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trending-content h3 {
+  color: #00001a;
+}
+
+.trending-content h2 {
+  font-size: 32px;
+  color: #c5c6ce;
+  font-weight: 700;
+}
+
+.trending-content p {
+  color: #5e607a;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: red;
+  }
+}

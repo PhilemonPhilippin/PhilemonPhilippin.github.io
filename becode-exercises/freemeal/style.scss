@@ -1,8 +1,7 @@
-$dark-color: #615d6c;
-$light-color: #cae5ff;
-$light-blue-color: #89bbfe;
-$dark-blue-color: #6f8ab7;
-$green-color: #dbf4a7;
+$black-color: #142514;
+$light-color: #d5ecd4;
+$dark-color: #172a3a;
+$grey-color: #a1b0ab;
 
 @mixin flex($direction) {
   display: flex;
@@ -22,6 +21,18 @@ $green-color: #dbf4a7;
   align-items: center;
 }
 
+.black-text {
+  color: black;
+}
+
+.white-text {
+  color: white;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -30,9 +41,10 @@ $green-color: #dbf4a7;
 
 body {
   min-height: 100vh;
-  background: $dark-color;
+  background: $black-color;
   @include flex(column);
   @include flex-center-y();
+  overflow-x: hidden;
 }
 
 body header {
@@ -43,13 +55,10 @@ body header {
 
 h1 {
   padding: 15px;
-  color: $green-color;
   font-size: 2.5rem;
 }
 
 main {
-  color: white;
-  padding: 10px;
   @include flex(column);
   @include flex-center-both();
 }
@@ -59,99 +68,94 @@ main {
 }
 
 .search {
-  padding: 10px;
-}
+  margin-bottom: 1rem;
 
-.search h2 {
-  font-size: 1.4rem;
-}
+  h2 {
+    font-size: 1.4rem;
+  }
 
-.search input {
-  padding: 6px;
-  margin-top: 8px;
-  border: none;
-  width: 400px;
-}
+  input {
+    padding: 6px;
+    margin-top: 8px;
+    border: none;
+    width: 400px;
+  }
 
-.search button {
-  padding: 6px;
-  //   background: $light-color;
-  background: $green-color;
-  border: none;
-  cursor: pointer;
-}
+  button {
+    padding: 6px;
+    background: #eee;
+    border: none;
+    cursor: pointer;
+  }
 
-.search button:hover {
-  background: $dark-blue-color;
+  button:hover {
+    background: $light-color;
+  }
 }
 
 .search-result-text {
-  padding: 10px;
   font-size: 1.4rem;
 }
 
 .modal {
-  height: 100vh;
+  max-height: 95vh;
+  width: 50vw;
   position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 8px;
-  width: 400px;
-  padding: 1rem;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  z-index: 2;
-  overflow-y: initial;
-  background: $green-color;
-}
-
-.modal .flex {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.meal-card {
+  top: 2.5%;
   overflow-y: auto;
-}
+  z-index: 2;
+  border: 1px solid $grey-color;
+  border-radius: 15px;
+  background: $light-color;
+  padding: 0.25rem 1rem;
 
-.meal-thumb {
-  width: 100%;
-  object-fit: cover;
-}
+  .modal-inside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    // background: $light-color;
+    min-height: 100%;
+  }
 
-.meal-title {
-  padding: 10px;
-}
+  .btn-close-container {
+    display: flex;
+    justify-content: flex-end;
 
-.meal-card h3 {
-  color: black;
-}
+    .btn-close {
+      padding: 5px 8px 5px 8px;
+      background: #eee;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+  }
 
-.meal-ingredients {
-  font-size: 0.9rem;
-  color: black;
-  padding: 15px;
-  list-style-type: square;
-}
+  .meal-card {
+    @include flex(column);
+    @include flex-center-both();
 
-.modal h2 {
-  color: black;
-  font-size: 1.4rem;
-}
+    .meal-thumb {
+      object-fit: cover;
+      max-width: 250px;
+      max-height: 250px;
+      border-radius: 15px;
+    }
 
-.modal p {
-  font-size: 0.9rem;
-  color: black;
-  margin: 0.4rem 0 0.2rem;
-  height: 200px;
-}
+    .meal-ingredients {
+      font-size: 0.9rem;
+      padding: 15px;
+      list-style-type: square;
+    }
+  }
 
-.btn-close {
-  padding: 0.5rem;
-  background: #eee;
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 0.4rem 0 0.2rem;
+  }
 }
 
 .overlay {
@@ -180,37 +184,36 @@ main {
 
 .grid-item {
   @include flex(column);
-  //   @include flex-center-y();
+  @include flex-center-y();
   justify-content: space-evenly;
   max-width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background: $green-color;
-  padding: 7px;
+  background: $dark-color;
   border-radius: 7px;
+
+  .title {
+    padding: 5px;
+  }
+
+  img {
+    object-fit: cover;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 7px;
+  }
 }
 
 .grid-item:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  background: $dark-blue-color;
-}
-
-.title {
-  color: black;
-}
-
-.grid .grid-item img {
-  object-fit: cover;
-  max-width: 250px;
-  max-height: 250px;
+  background: $light-color;
 }
 
 footer {
   margin-top: auto;
-  padding: 10px;
-}
 
-footer h2 {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: white;
+  h2 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+  }
 }

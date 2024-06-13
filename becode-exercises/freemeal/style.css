@@ -1,3 +1,15 @@
+.black-text {
+  color: black;
+}
+
+.white-text {
+  color: white;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,10 +18,11 @@
 
 body {
   min-height: 100vh;
-  background: #615d6c;
+  background: #142514;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 body header {
@@ -22,13 +35,10 @@ body header {
 
 h1 {
   padding: 15px;
-  color: #dbf4a7;
   font-size: 2.5rem;
 }
 
 main {
-  color: white;
-  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,99 +50,84 @@ main {
 }
 
 .search {
-  padding: 10px;
+  margin-bottom: 1rem;
 }
-
 .search h2 {
   font-size: 1.4rem;
 }
-
 .search input {
   padding: 6px;
   margin-top: 8px;
   border: none;
   width: 400px;
 }
-
 .search button {
   padding: 6px;
-  background: #dbf4a7;
+  background: #eee;
   border: none;
   cursor: pointer;
 }
-
 .search button:hover {
-  background: #6f8ab7;
+  background: #d5ecd4;
 }
 
 .search-result-text {
-  padding: 10px;
   font-size: 1.4rem;
 }
 
 .modal {
-  height: 100vh;
+  max-height: 95vh;
+  width: 50vw;
   position: fixed;
-  top: 0;
+  top: 2.5%;
+  overflow-y: auto;
+  z-index: 2;
+  border: 1px solid #a1b0ab;
+  border-radius: 15px;
+  background: #d5ecd4;
+  padding: 0.25rem 1rem;
+}
+.modal .modal-inside {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  width: 400px;
-  padding: 1rem;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  z-index: 2;
-  overflow-y: initial;
-  background: #dbf4a7;
+  min-height: 100%;
 }
-
-.modal .flex {
+.modal .btn-close-container {
   display: flex;
   justify-content: flex-end;
 }
-
-.meal-card {
-  overflow-y: auto;
+.modal .btn-close-container .btn-close {
+  padding: 5px 8px 5px 8px;
+  background: #eee;
+  border-radius: 7px;
+  cursor: pointer;
 }
-
-.meal-thumb {
-  width: 100%;
+.modal .meal-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal .meal-card .meal-thumb {
   -o-object-fit: cover;
      object-fit: cover;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 15px;
 }
-
-.meal-title {
-  padding: 10px;
-}
-
-.meal-card h3 {
-  color: black;
-}
-
-.meal-ingredients {
+.modal .meal-card .meal-ingredients {
   font-size: 0.9rem;
-  color: black;
   padding: 15px;
   list-style-type: square;
 }
-
 .modal h2 {
-  color: black;
   font-size: 1.4rem;
 }
-
 .modal p {
   font-size: 0.9rem;
-  color: black;
   margin: 0.4rem 0 0.2rem;
-  height: 200px;
-}
-
-.btn-close {
-  padding: 0.5rem;
-  background: #eee;
 }
 
 .overlay {
@@ -163,35 +158,32 @@ main {
 .grid-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
   max-width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background: #dbf4a7;
-  padding: 7px;
+  background: #172a3a;
+  border-radius: 7px;
+}
+.grid-item .title {
+  padding: 5px;
+}
+.grid-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 250px;
+  max-height: 250px;
   border-radius: 7px;
 }
 
 .grid-item:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  background: #6f8ab7;
-}
-
-.title {
-  color: black;
-}
-
-.grid .grid-item img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-width: 250px;
-  max-height: 250px;
+  background: #d5ecd4;
 }
 
 footer {
   margin-top: auto;
-  padding: 10px;
 }
-
 footer h2 {
   font-size: 0.9rem;
   font-weight: 500;

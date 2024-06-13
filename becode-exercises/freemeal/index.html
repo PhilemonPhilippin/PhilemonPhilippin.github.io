@@ -12,16 +12,16 @@
   </head>
   <body>
     <header>
-      <h1>Free meals</h1>
+      <h1 class="white-text">Free meals</h1>
     </header>
-    <main>
+    <main class="white-text padding-10">
       <div class="intro">
         <p>
           Hello and welcome in this little program designed to search for free
           meals.
         </p>
       </div>
-      <div class="search">
+      <div class="search padding-10">
         <h2>Search</h2>
         <div class="search-component">
           <input type="text" name="search" id="search" placeholder="Search.." />
@@ -30,24 +30,28 @@
           </button>
         </div>
       </div>
-      <h2 class="search-result-text"></h2>
+      <h2 class="search-result-text padding-10"></h2>
       <div class="modal hidden">
-        <div class="flex">
-          <button class="btn-close">X</button>
-        </div>
-        <div class="meal-card">
-          <img class="meal-thumb" />
-          <h2 class="meal-title"></h2>
-          <h3>Ingredients:</h3>
-          <ul class="meal-ingredients"></ul>
-          <h3>Preparation:</h3>
-          <p class="meal-instructions"></p>
+        <div class="modal-inside">
+          <div class="btn-close-container">
+            <button class="btn-close">X</button>
+          </div>
+          <div class="meal-card black-text">
+            <div class="meal-thumb-container">
+              <img class="meal-thumb" />
+            </div>
+            <h2 class="meal-title padding-10"></h2>
+            <h3>Ingredients:</h3>
+            <ul class="meal-ingredients"></ul>
+            <h3>Preparation:</h3>
+            <p class="meal-instructions"></p>
+          </div>
         </div>
       </div>
       <div class="overlay hidden"></div>
       <div class="grid"></div>
     </main>
-    <footer>
+    <footer class="padding-10">
       <h2>Philémon Philippin - 2024</h2>
     </footer>
     <script src="app.js"></script>

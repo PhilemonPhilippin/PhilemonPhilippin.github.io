@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEMOVIES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <header class="nav-header">
+        <div class="nav-header-inside">
+          <h1><span>BE</span>MOVIES</h1>
+          <nav>
+            <a href="#search-container">SEARCH</a>
+            <a href="#latest-release-container">LATEST</a>
+            <a href="#movies-by-genre-container">GENRES</a>
+            <a class="register">REGISTER</a>
+            <a class="signin">SIGNIN</a>
+          </nav>
+        </div>
+        <div class="modalLogin hidden">
+          <div class="modalLogin-inside">
+            <div class="btn-close-login-container">
+              <button class="btn-close-login">X</button>
+            </div>
+            <div class="signup-login-btns">
+              <button class="dark-btn">SIGNUP</button>
+              <button class="dark-btn">LOGIN</button>
+            </div>
+            <div class="login">
+              <div class="login-userName-container">
+                <input
+                  type="text"
+                  name="login-userName"
+                  id="login-userName"
+                  placeholder="Username"
+                />
+              </div>
+              <div class="login-password-container">
+                <input
+                  type="password"
+                  name="login-pswd"
+                  id="login-pswd"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="remember-me-container">
+                <input
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                /><span>Remember me</span>
+              </div>
+              <button class="btn-login">LOGIN</button>
+              <div class="login-footer">
+                <p class="forgotten-password">I forgot my password</p>
+                <p class="login-not-member-yet">
+                  Not a member yet ? <span>Sign up</span>
+                </p>
+              </div>
+            </div>
+            <div class="signup">
+              <div class="signup-userName-container">
+                <input
+                  type="text"
+                  name="signup-userName"
+                  id="signup-userName"
+                  placeholder="Username"
+                />
+              </div>
+              <div class="email-container">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="signup-password-container">
+                <input
+                  type="password"
+                  name="signup-pswd"
+                  id="signup-pswd"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="signup-confirm-password-container">
+                <input
+                  type="password"
+                  name="signup-confirm-pswd"
+                  id="signup-confirm-pswd"
+                  placeholder="Confirm password"
+                />
+              </div>
+              <button class="btn-signup">SIGNUP</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="modalMovie hidden">
+          <div class="modalMovie-inside">
+            <div class="btn-close-movie-container">
+              <button class="btn-close-movie">X</button>
+            </div>
+            <div class="movie-card">
+              <div class="movie-poster-container"></div>
+              <div class="movie-content"></div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay hidden"></div>
+        <div id="search-container" class="search-container">
+          <div class="search-input-container">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search.."
+            />
+          </div>
+          <button class="btn-search"><img src="./rarr.png" /></button>
+        </div>
+        <div class="search-result-container hidden">
+          <h2>Results for</h2>
+          <div class="search-result"></div>
+        </div>
+        <div id="latest-release-container" class="latest-release-container">
+          <h2>Latest releases</h2>
+          <div class="latest-releases-result">
+            <div class="swiper swiper-latest">
+              <div class="swiper-wrapper swiper-wrapper2"></div>
+              <div class="swiper-button-prev swiper-button-prev-latest">
+                <img src="./left.png" />
+              </div>
+              <div class="swiper-button-next swiper-button-next-latest">
+                <img src="./right.png" />
+              </div>
+              <div class="swiper-scrollbar swiper-scrollbar-latest"></div>
+            </div>
+          </div>
+        </div>
+        <div id="movies-by-genre-container" class="movies-by-genre-container">
+          <header class="movies-by-genre-header">
+            <h2>Movies by genre</h2>
+            <nav>
+              <a class="comedy">Comedy</a>
+              <a class="drama">Drama</a>
+              <a class="action">Action</a>
+              <a class="romance">Romance</a>
+              <a class="fantasy">Fantasy</a>
+              <a class="animation">Animation</a>
+            </nav>
+          </header>
+
+          <div class="movies-by-genre">
+            <h3></h3>
+            <div class="movies-by-genre-result">
+              <div class="swiper swiper-genre">
+                <div class="swiper-wrapper swiper-wrapper3"></div>
+                <div class="swiper-button-prev swiper-button-prev-genre">
+                  <img src="./left.png" />
+                </div>
+                <div class="swiper-button-next swiper-button-next-genre">
+                  <img src="./right.png" />
+                </div>
+                <div class="swiper-scrollbar swiper-scrollbar-genre"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <h2><span>BE</span>MOVIES</h2>
+        <nav>
+          <a href="#search-container">SEARCH</a>
+          <a href="#latest-release-container">LATEST</a>
+          <a href="#movies-by-genre-container">GENRES</a>
+          <a class="register">REGISTER</a>
+          <a class="signin">SIGNIN</a>
+        </nav>
+        <div class="copyright">@2023 - All rights reserved</div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

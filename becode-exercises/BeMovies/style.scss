@@ -1,0 +1,414 @@
+@mixin flex($direction: row, $justify: normal, $align: normal) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin grid($columns: none, $rows: none) {
+  display: grid;
+  grid-template-rows: $rows;
+  grid-template-columns: $columns;
+}
+
+@mixin for-phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.page-container {
+  background-color: #191b20;
+  min-height: 100vh;
+
+  header.nav-header {
+    .nav-header-inside {
+      @include flex($justify: space-between, $align: center);
+      background-color: #141517;
+      font-family: "Inria Sans", sans-serif;
+      padding: 0 10%;
+      height: 80px;
+
+      h1 {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 700;
+
+        span {
+          color: #cc0000;
+        }
+      }
+
+      nav {
+        a {
+          color: #fff;
+          text-decoration: none;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .modalLogin {
+      width: 100%;
+      position: relative;
+      z-index: 15;
+      .modalLogin-inside {
+        position: fixed;
+        left: 45%;
+        top: 30%;
+        background-color: #000000;
+        @include flex($direction: column, $justify: center);
+
+        .btn-close-login-container {
+          margin-bottom: 15px;
+          padding: 10px;
+
+          button {
+            padding: 3px;
+          }
+        }
+
+        .signup-login-btns {
+          text-align: center;
+          margin-bottom: 15px;
+
+          button {
+            padding: 3px;
+            border-radius: 5px;
+          }
+        }
+        .login {
+          padding: 20px;
+          .login-userName-container {
+            margin-bottom: 5px;
+
+            input {
+              width: 95%;
+            }
+          }
+          .login-password-container {
+            margin-bottom: 10px;
+
+            input {
+              width: 95%;
+            }
+          }
+          .remember-me-container {
+            @include flex($justify: center);
+            margin-bottom: 15px;
+
+            span {
+              color: white;
+            }
+          }
+          .btn-login {
+            padding: 5px;
+            background-color: #cc0000;
+            color: white;
+            width: 95%;
+            margin-bottom: 15px;
+          }
+
+          .login-footer {
+            color: white;
+            .forgotten-password {
+              color: #cc0000;
+            }
+            .login-not-member-yet {
+              span {
+                color: #cc0000;
+              }
+            }
+          }
+        }
+        .signup {
+          padding: 20px;
+
+          .signup-userName-container {
+            margin-bottom: 5px;
+
+            input {
+              width: 95%;
+            }
+          }
+
+          .email-container {
+            margin-bottom: 5px;
+
+            input {
+              width: 95%;
+            }
+          }
+
+          .signup-password-container {
+            margin-bottom: 5px;
+
+            input {
+              width: 95%;
+            }
+          }
+
+          .signup-confirm-password-container {
+            margin-bottom: 15px;
+
+            input {
+              width: 95%;
+            }
+          }
+
+          .btn-signup {
+            padding: 5px;
+            background-color: #cc0000;
+            color: white;
+            width: 95%;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    padding: 0 10%;
+    .modalMovie {
+      max-height: 90vh;
+      width: 50vw;
+      position: fixed;
+      top: 5%;
+      z-index: 15;
+      padding: 15px;
+      .modalMovie-inside {
+        .btn-close-movie-container {
+          margin-bottom: 15px;
+
+          button {
+            padding: 5px;
+          }
+        }
+        .movie-card {
+          display: flex;
+          flex-direction: row;
+          .movie-poster-container {
+            border-color: white;
+            border-style: solid;
+            margin-right: 50px;
+            img {
+              max-width: 234px;
+              max-height: 351px;
+            }
+          }
+          .movie-content {
+            color: #fff;
+            h1 {
+              color: #cc0000;
+              margin-bottom: 5px;
+            }
+            h2 {
+              color: #e9e9e9;
+              margin-bottom: 10px;
+            }
+            h3 {
+              color: #cc0000;
+              margin-bottom: 10px;
+            }
+            h4 {
+              margin-bottom: 5px;
+            }
+            p {
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .search-container {
+      @include flex($justify: center);
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+      .search-input-container {
+        input {
+          padding: 10px;
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+      }
+
+      .btn-search {
+        padding: 5px 8px;
+        background-color: #cc0000;
+        color: #fff;
+        font-weight: 900;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+    .search-result-container {
+      margin-bottom: 50px;
+
+      h2 {
+        color: #fff;
+      }
+    }
+
+    .latest-release-container {
+      margin-bottom: 50px;
+      h2 {
+        color: #fff;
+      }
+    }
+
+    .movies-by-genre-container {
+      margin-bottom: 50px;
+
+      color: #fff;
+
+      header.movies-by-genre-header {
+        margin-bottom: 50px;
+
+        h2 {
+          margin-bottom: 25px;
+          text-align: center;
+        }
+
+        nav {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+
+          a {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+
+        nav::after {
+          display: block;
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 0.5px;
+          top: 175%;
+          left: 0;
+          background-color: white;
+        }
+      }
+    }
+  }
+  footer {
+    @include flex($justify: space-between, $align: center);
+    height: 125px;
+    padding: 0 10%;
+    font-family: "Inria Sans", sans-serif;
+    background-color: #141517;
+
+    h2 {
+      color: #fff;
+
+      span {
+        color: #cc0000;
+      }
+    }
+    nav {
+      a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 10px;
+      }
+    }
+
+    .copyright {
+      color: #b8b8b8;
+    }
+  }
+}
+
+.swiper-slide img {
+  max-width: 234px;
+  max-height: 351px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(3px);
+  z-index: 10;
+}
+
+.swiper-wrapper {
+  .swiper-slide {
+    .hoverContent {
+      h1 {
+        color: #fff;
+      }
+      h2 {
+        color: #b0b0b0;
+      }
+      h3 {
+        color: #cc0000;
+      }
+      p {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// .swiper {
+//   position: relative;
+//   .swiper-wrapper {
+//     position: relative;
+//     min-height: 400px;
+//     .swiper-slide {
+//       .div-imgfilm {
+//         position: absolute;
+//         z-index: 1;
+//       }
+//       .hoverContent {
+//         position: absolute;
+//         z-index: 0;
+//       }
+//     }
+//   }
+// }
+
+// .red-btn {
+//   background-color: #CC0000;
+// }
+
+.signinBtnActive {
+  color: white;
+  background-color: #cc0000;
+}
+
+.dark-btn {
+  background-color: #000000;
+  color: white;
+}

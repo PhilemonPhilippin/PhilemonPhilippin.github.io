@@ -1,7 +1,14 @@
-import { returnKey } from "./return-key.js";
+import { returnToken } from "./return-key.js";
 
-// Appeler la fonction returnKey pour obtenir l'API key.
-returnKey();
+const token = returnToken();
+
+const options = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization: `Bearer ${token}`,
+  },
+};
 
 document.querySelector(".btn-search").addEventListener("click", fetchData);
 
@@ -17,13 +24,8 @@ async function fetchData() {
     const response = await fetch(
       `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(
         search
-      )}&api_key=${returnKey()}`,
-      {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-        },
-      }
+      )}`,
+      options
     );
 
     if (!response.ok) {
@@ -36,9 +38,8 @@ async function fetchData() {
     for (const element of data.results) {
       const date = element.release_date.substring(0, 4);
       const genres = await getGenres(element.genre_ids);
-      const movieUrl = `https://api.themoviedb.org/3/movie/${
-        element.id
-      }?api_key=${returnKey()}`;
+      const movieUrl = `https://api.themoviedb.org/3/movie/${element.id}
+      `;
 
       output += `
                 <div class="swiper-slide">
@@ -89,13 +90,8 @@ async function getGenres(genreIds) {
   const genres = [];
   try {
     const response = await fetch(
-      `https://api.themoviedb.org/3/genre/movie/list?api_key=${returnKey()}`,
-      {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-        },
-      }
+      `https://api.themoviedb.org/3/genre/movie/list`,
+      options
     );
 
     if (!response.ok) {
@@ -125,13 +121,8 @@ async function fetchDatalatest() {
   let output = ``;
   try {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/now_playing?api_key=${returnKey()}`,
-      {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-        },
-      }
+      `https://api.themoviedb.org/3/movie/now_playing`,
+      options
     );
 
     if (!response.ok) {
@@ -146,7 +137,7 @@ async function fetchDatalatest() {
       const genres = await getGenres(element.genre_ids);
       const movieUrl = `https://api.themoviedb.org/3/movie/${
         element.id
-      }?api_key=${returnKey()}`;
+      }`;
 
       output += `
             <div class="swiper-slide slides2">
@@ -222,13 +213,8 @@ async function fetchDatagenres(genreID) {
   let output = ``;
   try {
     const response = await fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${returnKey()}&with_genres=${genreID}`,
-      {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-        },
-      }
+      `https://api.themoviedb.org/3/discover/movie?with_genres=${genreID}`,
+      options
     );
     if (!response.ok) {
       console.log(response.statusText);
@@ -241,7 +227,7 @@ async function fetchDatagenres(genreID) {
       const genres = await getGenres(element.genre_ids);
       const movieUrl = `https://api.themoviedb.org/3/movie/${
         element.id
-      }?api_key=${returnKey()}`;
+      }`;
 
       output += `
             <div class="swiper-slide slides3">
@@ -343,16 +329,15 @@ function openModalFilm() {
       document.querySelector(".modalMovie").classList.remove("hidden");
       const movieUrl = e.currentTarget.getAttribute("data-url");
 
-      fetch(movieUrl)
+      fetch(movieUrl, options)
         .then(function (response) {
           return response.json();
         })
         .then(function (data) {
           // Fetch movie credits to get the cast
           return fetch(
-            `https://api.themoviedb.org/3/movie/${
-              data.id
-            }/credits?api_key=${returnKey()}`
+            `https://api.themoviedb.org/3/movie/${data.id}/credits`,
+            options
           )
             .then(function (response2) {
               return response2.json();

@@ -181,8 +181,6 @@ body {
   main {
     padding: 0 10%;
     .modalMovie {
-      max-height: 90vh;
-      width: 50vw;
       position: fixed;
       top: 5%;
       z-index: 15;
@@ -203,8 +201,8 @@ body {
             border-style: solid;
             margin-right: 50px;
             img {
-              max-width: 234px;
-              max-height: 351px;
+              max-width: 230px;
+              max-height: 350px;
             }
           }
           .movie-content {
@@ -291,6 +289,7 @@ body {
           a {
             color: #fff;
             text-decoration: none;
+            cursor: pointer;
           }
         }
 
@@ -335,11 +334,6 @@ body {
   }
 }
 
-.swiper-slide img {
-  max-width: 234px;
-  max-height: 351px;
-}
-
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
@@ -381,27 +375,37 @@ body {
   }
 }
 
-// .swiper {
-//   position: relative;
-//   .swiper-wrapper {
-//     position: relative;
-//     min-height: 400px;
-//     .swiper-slide {
-//       .div-imgfilm {
-//         position: absolute;
-//         z-index: 1;
-//       }
-//       .hoverContent {
-//         position: absolute;
-//         z-index: 0;
-//       }
-//     }
-//   }
-// }
-
-// .red-btn {
-//   background-color: #CC0000;
-// }
+.swiper-slide {
+  position: relative;
+  cursor: pointer;
+  .div-imgfilm {
+    img {
+      width: 100%;
+      height: auto;
+      z-index: 1;
+    }
+  }
+  .hoverContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+}
+.swiper-slide:hover {
+  .hoverContent {
+    opacity: 1;
+    z-index: 50;
+  }
+}
 
 .signinBtnActive {
   color: white;
@@ -411,4 +415,11 @@ body {
 .dark-btn {
   background-color: #000000;
   color: white;
+}
+
+.signin {
+  cursor: pointer;
+}
+.register {
+  cursor: pointer;
 }

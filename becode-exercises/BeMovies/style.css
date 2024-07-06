@@ -144,8 +144,6 @@ body {
   padding: 0 10%;
 }
 .page-container main .modalMovie {
-  max-height: 90vh;
-  width: 50vw;
   position: fixed;
   top: 5%;
   z-index: 15;
@@ -167,8 +165,8 @@ body {
   margin-right: 50px;
 }
 .page-container main .modalMovie .modalMovie-inside .movie-card .movie-poster-container img {
-  max-width: 234px;
-  max-height: 351px;
+  max-width: 230px;
+  max-height: 350px;
 }
 .page-container main .modalMovie .modalMovie-inside .movie-card .movie-content {
   color: #fff;
@@ -244,6 +242,7 @@ body {
 .page-container main .movies-by-genre-container header.movies-by-genre-header nav a {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 .page-container main .movies-by-genre-container header.movies-by-genre-header nav::after {
   display: block;
@@ -278,11 +277,6 @@ body {
 }
 .page-container footer .copyright {
   color: #b8b8b8;
-}
-
-.swiper-slide img {
-  max-width: 234px;
-  max-height: 351px;
 }
 
 .swiper-button-next::after,
@@ -321,6 +315,35 @@ body {
   color: #fff;
 }
 
+.swiper-slide {
+  position: relative;
+  cursor: pointer;
+}
+.swiper-slide .div-imgfilm img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+.swiper-slide .hoverContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.swiper-slide:hover .hoverContent {
+  opacity: 1;
+  z-index: 50;
+}
+
 .signinBtnActive {
   color: white;
   background-color: #cc0000;
@@ -329,4 +352,12 @@ body {
 .dark-btn {
   background-color: #000000;
   color: white;
+}
+
+.signin {
+  cursor: pointer;
+}
+
+.register {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

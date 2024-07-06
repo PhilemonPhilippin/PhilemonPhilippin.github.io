@@ -72,6 +72,7 @@ async function fetchData() {
     // Initialize Swiper
     new Swiper(".swiper-search", {
       slidesPerView: 4,
+      spaceBetween: 20,
       navigation: {
         nextEl: ".swiper-button-next-search",
         prevEl: ".swiper-button-prev-search",
@@ -162,6 +163,7 @@ async function fetchDatalatest() {
     // Initialize Swiper
     new Swiper(".swiper-latest", {
       slidesPerView: 4,
+      spaceBetween: 20,
       navigation: {
         nextEl: ".swiper-button-next-latest",
         prevEl: ".swiper-button-prev-latest",
@@ -250,6 +252,7 @@ async function fetchDatagenres(genreID) {
     // Initialize Swiper
     new Swiper(".swiper-genre", {
       slidesPerView: 4,
+      spaceBetween: 20,
       navigation: {
         nextEl: ".swiper-button-next-genre",
         prevEl: ".swiper-button-prev-genre",

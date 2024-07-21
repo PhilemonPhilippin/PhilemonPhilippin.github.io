@@ -44,7 +44,8 @@ function refreshList(todos) {
     listItem.innerText = todo["text"];
     const anchorDelete = document.createElement("a");
     anchorDelete.innerText = "delete";
-    anchorDelete.addEventListener("click", async () => {
+    anchorDelete.addEventListener("click", async (e) => {
+      e.preventDefault();
       await deleteTodo(todo["_id"]);
       await displayTodos();
     });

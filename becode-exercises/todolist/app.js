@@ -22,7 +22,8 @@ btnRefresh.addEventListener("click", async () => {
   await displayTodos();
 });
 
-btnSubmit.addEventListener("click", async () => {
+btnSubmit.addEventListener("click", async (e) => {
+  e.preventDefault();
   await postToDo();
   await displayTodos();
 });

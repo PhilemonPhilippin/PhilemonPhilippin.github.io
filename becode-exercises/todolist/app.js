@@ -2,7 +2,8 @@ const todoList = document.querySelector(".todolist");
 const btnRefresh = document.querySelector(".btn-refresh");
 const btnSubmit = document.querySelector(".btn-submit");
 const inputText = document.getElementById("todo");
-const uriBase = "http://localhost:3000/api/todo";
+const uriBase =
+  "https://new-express-project-philemon-philippins-projects.vercel.app/api/todo";
 
 setup();
 

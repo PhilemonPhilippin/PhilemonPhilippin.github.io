@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Job_Tracker</title>
+    <link rel="stylesheet" href="dashboard-style.css" />
+  </head>
+  <body>
+    <header>
+      <span id="logo">Job tracker</span>
+      <nav id="nav-logged-out">
+        <a
+          class="btn-login"
+          href="http://127.0.0.1:5500/src/pages/login/login.html"
+          >Login</a
+        >
+
+        <a
+          class="btn-signup"
+          href="http://127.0.0.1:5500/src/pages/signup/signup.html"
+        >
+          Signup
+        </a>
+      </nav>
+      <nav id="nav-logged-in" class="hidden">
+        <a id="username-span">Unknown</a>
+        <a class="btn-logout">Logout</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Dashboard</h1>
+      <div id="add-job-container">
+        <a id="btn-open-add-job">Create a new job</a>
+        <div id="add-job-form-container" class="hidden">
+          <form id="jobForm">
+            <div>
+              <label for="jobTitle">Job Title:</label>
+              <input type="text" id="jobTitle" name="jobTitle" required />
+            </div>
+            <div>
+              <label for="company">Company:</label>
+              <input type="text" id="company" name="company" required />
+            </div>
+
+            <div>
+              <label for="website">Website:</label>
+              <input type="url" id="website" name="website" required />
+            </div>
+
+            <div>
+              <label for="contactName">Contact Name:</label>
+              <input type="text" id="contactName" name="contactName" />
+            </div>
+
+            <div>
+              <label for="contactEmail">Contact Email:</label>
+              <input type="email" id="contactEmail" name="contactEmail" />
+            </div>
+
+            <div>
+              <label for="contactPhone">Contact Phone:</label>
+              <input type="tel" id="contactPhone" name="contactPhone" />
+            </div>
+
+            <div>
+              <label for="contactAddress">Contact Address:</label>
+              <input type="text" id="contactAddress" name="contactAddress" />
+            </div>
+
+            <div>
+              <label for="origin">Origin:</label>
+              <input type="text" id="origin" name="origin" required />
+            </div>
+
+            <div>
+              <label for="status">Status:</label>
+              <input type="text" id="status" name="status" required />
+            </div>
+
+            <div>
+              <label for="comment">Comment:</label>
+              <textarea id="comment" name="comment"></textarea>
+            </div>
+
+            <button type="submit" id="btn-create-job">Create</button>
+            <button id="btn-cancel-create">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <div id="ask-to-login" class="hidden">
+        <h2>You are not logged in</h2>
+        <p>
+          <a href="http://127.0.0.1:5500/src/pages/login/login.html">Log in </a
+          >to see your dashboard
+        </p>
+      </div>
+      <div id="jobs-grid"></div>
+    </main>
+    <script src="dashboard-script.js"></script>
+  </body>
+</html>

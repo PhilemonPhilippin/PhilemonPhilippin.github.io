@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup | Job_Tracker</title>
+    <link rel="stylesheet" href="signup-style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Signup</h1>
+      <form id="signup-form">
+        <div class="email">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="email" />
+        </div>
+        <div class="firstname">
+          <label for="firstname">Firstname</label>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="firstname"
+          />
+        </div>
+        <div class="lastname">
+          <label for="lastname">Lastname</label>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="lastname"
+          />
+        </div>
+        <div class="password">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="password"
+          />
+        </div>
+        <div class="btn-signup-container">
+          <button type="submit" class="btn-signup">Signup</button>
+        </div>
+      </form>
+      <div class="already-registered">
+        <p>
+          Already registered?
+          <a href="http://127.0.0.1:5500/src/pages/login/login.html">Login</a>
+        </p>
+      </div>
+    </main>
+    <script src="signup-script.js"></script>
+  </body>
+</html>

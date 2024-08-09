@@ -1,0 +1,45 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+.email {
+  margin-bottom: 20px;
+}
+
+.password {
+  margin-bottom: 20px;
+}
+
+.firstname {
+  margin-bottom: 20px;
+}
+
+.lastname {
+  margin-bottom: 20px;
+}
+
+input {
+  height: 30px;
+  width: 250px;
+  padding: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.btn-signup {
+  color: white;
+  background: #ae1818;
+  padding: 8px;
+  border-radius: 3px;
+  width: 100px;
+}

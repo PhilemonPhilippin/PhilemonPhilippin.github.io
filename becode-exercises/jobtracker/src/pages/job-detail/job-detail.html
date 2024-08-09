@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Job_Tracker</title>
+    <link rel="stylesheet" href="job-detail-style.css" />
+  </head>
+  <body>
+    <header>
+      <span id="logo">Job tracker</span>
+      <nav id="nav-logged-out">
+        <a
+          class="btn-login"
+          href="http://127.0.0.1:5500/src/pages/login/login.html"
+          >Login</a
+        >
+
+        <a
+          class="btn-signup"
+          href="http://127.0.0.1:5500/src/pages/signup/signup.html"
+        >
+          Signup
+        </a>
+      </nav>
+      <nav id="nav-logged-in" class="hidden">
+        <a id="username-span">Unknown</a>
+        <a class="btn-logout">Logout</a>
+      </nav>
+    </header>
+    <main>
+      <div id="job-detail"></div>
+      <script src="job-detail-script.js"></script>
+    </main>
+  </body>
+</html>

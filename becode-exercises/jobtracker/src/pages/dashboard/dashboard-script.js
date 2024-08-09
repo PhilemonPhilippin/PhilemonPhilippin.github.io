@@ -20,7 +20,8 @@ btnLogout.addEventListener("click", () => {
 });
 
 logo.addEventListener("click", () => {
-  const uri = "http://127.0.0.1:5500/src/pages/dashboard/dashboard.html";
+  const uri =
+    "https://philemonphilippin.github.io/becode-exercises/jobtracker/src/pages/dashboard/dashboard.html";
   window.location.href = uri;
 });
 
@@ -89,7 +90,7 @@ function closeAddJob() {
 }
 
 function openJobDetails(e, job) {
-  const uri = `http://127.0.0.1:5500/src/pages/job-detail/job-detail.html?id=${job._id}`;
+  const uri = `https://philemonphilippin.github.io/becode-exercises/jobtracker/src/pages/job-detail/job-detail.html?id=${job._id}`;
   window.location.href = uri;
 }
 
@@ -107,7 +108,7 @@ async function fetchJobs(userId, token) {
         Authorization: `Bearer ${token}`,
       },
     };
-    const uri = `http://localhost:3000/api/user/${userId}/joboffer`;
+    const uri = `https://job-tracker-e6y9.onrender.com/api/user/${userId}/joboffer`;
     const response = await fetch(uri, requestOptions);
     const jobs = await response.json();
     return jobs;
@@ -181,7 +182,7 @@ document
         const decodedToken = decodeToken(token);
         const tokenExpired = isTokenExpired(decodedToken.exp);
         if (!tokenExpired) {
-          const uri = `http://localhost:3000/api/user/${decodedToken.id}/joboffer`;
+          const uri = `https://job-tracker-e6y9.onrender.com/api/user/${decodedToken.id}/joboffer`;
           const response = await fetch(uri, {
             method: "POST",
             headers: {

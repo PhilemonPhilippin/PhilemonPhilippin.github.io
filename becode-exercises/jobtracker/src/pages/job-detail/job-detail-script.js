@@ -9,12 +9,13 @@ const logo = document.getElementById("logo");
 btnLogout.addEventListener("click", () => {
   localStorage.removeItem("jwt");
   window.location.replace(
-    "http://127.0.0.1:5500/src/pages/dashboard/dashboard.html"
+    "https://philemonphilippin.github.io/becode-exercises/jobtracker/src/pages/dashboard/dashboard.html"
   );
 });
 
 logo.addEventListener("click", () => {
-  const uri = "http://127.0.0.1:5500/src/pages/dashboard/dashboard.html";
+  const uri =
+    "https://philemonphilippin.github.io/becode-exercises/jobtracker/src/pages/dashboard/dashboard.html";
   window.location.href = uri;
 });
 
@@ -53,7 +54,7 @@ async function fetchJob(userId, token) {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const jobId = urlParams.get("id");
-    const uri = `http://localhost:3000/api/user/${userId}/joboffer/${jobId}`;
+    const uri = `https://job-tracker-e6y9.onrender.com/api/user/${userId}/joboffer/${jobId}`;
     const response = await fetch(uri, requestOptions);
     const job = await response.json();
     return job;

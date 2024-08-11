@@ -1,5 +1,13 @@
 ## PhilemonPhilippin.github.io
 
-My Github page is currently being used to display the little BeCode exercises for practicing HTML, CSS and JavaScript.
+My Github page is currently being used to display my CV and a small project.
 
-Link to the page : https://philemonphilippin.github.io/
+I made this small BeCode project in one week : [FreeMeal](https://philemonphilippin.github.io/becode-exercises/freemeal/).
+
+I've completed many other projects during my training to learn and exercise my knowledge of front end (without any framework).
+
+These projects aren't very impressive, and not really original, so I've decided not to post them here.
+
+At the moment, as part of my professional training, we're looking at React. As part of this, I'll be implementing a fullstack application using this framework. I plan to post this project here, so please come back in a few days to explore this brand-new project.
+
+Link to the main GitHub page : https://philemonphilippin.github.io/

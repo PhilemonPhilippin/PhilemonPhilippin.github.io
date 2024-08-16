@@ -8,6 +8,6 @@ I've completed many other projects during my training to learn and exercise my k
 
 These projects aren't very impressive, and not really original, so I've decided not to post them here.
 
-At the moment, as part of my professional training, we're looking at React. As part of this, I'll be implementing a fullstack application using this framework. I plan to post this project here, so please come back in a few days to explore this brand-new project.
+At the moment, as part of my professional training, we're looking at React.
 
 Link to the main GitHub page : https://philemonphilippin.github.io/

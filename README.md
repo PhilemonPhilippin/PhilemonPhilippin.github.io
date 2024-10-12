@@ -2,7 +2,7 @@
 
 ## What is there on this portfolio ?
 
-This GitHub page is currently being used to display my CV, a small front end project (free meal) as well as a short course on binary, hexadecimal and decimal which I wrote myself in a few hours.
+This GitHub page is currently being used to display my CV and a small front end project (free meal).
 
 ## Free meal
 

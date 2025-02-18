@@ -1,5 +1,0 @@
-function returnToken() {
-  return "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkODcxOTBhZGU4Njk4MjU0MGQxNTE5MjEyZmZhMmU4MSIsIm5iZiI6MTcyMDAxMTU5Mi40OTI5MTgsInN1YiI6IjY2NzAwNjgyNDNmY2NkYzVlNGQxZDY0MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.C3QhmsSYXpnQnPFAOKjq60GfHZLXHFuXi2WgfckjBm8";
-}
-
-export { returnToken };
